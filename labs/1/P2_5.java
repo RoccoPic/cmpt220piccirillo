@@ -11,10 +11,11 @@ public class P2_5
 		double subtotal = input.nextDouble();
 		double gratuity = input.nextDouble();
 		
-		double gratuityRate = gratuity * 0.1;
-		double total = subtotal + gratuityRate;
+		double gratuityRate = gratuity * 0.01; // JA
+		double total = subtotal + subtotal * gratuityRate; // JA
 		
-		System.out.print("The Gratuity Rate is $" + gratuityRate + " and the total is $" + total);
+		System.out.print("The Gratuity Rate is $" + (subtotal * gratuityRate) 
+		+ " and the total is $" + total); // JA
 	}
 	
 }
