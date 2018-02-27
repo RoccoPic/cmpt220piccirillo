@@ -39,7 +39,7 @@ public class P7_5
 		int location = 0;
 		for(int i = 1; i <= 10; i++) {
 			while (numbers.contains(i) == true) {
-				location = numbers.indexOf(i);
+				location = numbers.indexOf(i); // JA: You need to check the number, not the index. Here you are removing random values.
 				numbers.remove(location);
 				
 				if(numbers.contains(i) == false)
