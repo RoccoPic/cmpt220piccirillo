@@ -35,7 +35,7 @@ public boolean contains(double x, double y) {
 	return Math.sqrt(Math.pow(x - this.x, 2) + Math.pow(y - this.y, 2)) < radius;
 }
 public boolean contains(Circle2D circle) {
-		return Math.sqrt(Math.pow(x - this.x, 2) + Math.pow(y - this.y, 2)) <= Math.abs(radius - circle.getRadius());
+		return Math.sqrt(Math.pow(x - this.x, 2) + Math.pow(y - this.y, 2)) <= radius - circle.getRadius(); // JA
 }	
 public boolean overlaps(Circle2D circle) {
 	return Math.sqrt(Math.pow(circle.getX() - x, 2) + Math.pow(circle.getY() - y, 2)) <= radius + circle.getRadius();
